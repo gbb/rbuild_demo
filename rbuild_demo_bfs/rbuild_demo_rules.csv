@@ -1,0 +1,9 @@
+Name,,Version,Date
+rbuild_demo_rules,,1,10/10/13
+,,,
+Rule,in/land1/A,in/nat1/B,out/present_in_both_shapes/integer
+1,*,*,0
+# this rule matches everything,,,
+2,0...100,0...4,1
+# this rule matches any cell where both A and B have a data value,,,
+# since it is higher priority (further down the page) it overwrites any previous rule.,,,
