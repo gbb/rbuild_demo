@@ -29,11 +29,7 @@ Make sure you have installed Python, PostGIS and GDAL (with Python bindings/SWIG
 
     $ yum install postgis gdal parallel numpy python 
 
-    (or as appropriate for your linux version)
-
-    (ideally postgis >2.1, gdal >1.10, parallel >20130222)
-
-    $ compile dan's scripts by hand from github: https://github.com/gina-alaska/dans-gdal-scripts
+Or as appropriate for your linux version. Ideally postgis >2.1, gdal >1.10, parallel >20130222. You can compile dan's scripts by hand from github: https://github.com/gina-alaska/dans-gdal-scripts
 
 Make sure you have installed rbuild in your home directory (or another choice of directory)
 
@@ -68,11 +64,12 @@ Now we'll add some OpenStreetMap maps into the postgis db.
     $ shp2pgsql -d -S -I -D -i -s 25833 shp/nat1.shp nat1 | psql rbuild_demo
     $ shp2pgsql -d -S -I -D -i -s 25833 shp/land1.shp land1  | psql rbuild_demo
 
--- (The dataset came from here: http://download.geofabrik.de/europe.html)
--- (I have added some numerical fields to the .shp for this demonstration and reprojected to UTM33)
--- (You can take a look at the data in e.g. QGIS. Notice that some land features in both datasets.)
--- (You can also take a look at the buildfiles. The main file we'll be calling is rbd_bf/main.bf. It calls the other files.)
--- Disregard any error message about 'land1' does not exist. This comes from the use of '-d' in case you have tried the demo previously and forgot to remove the DB afterwards.
+
+The dataset came from here: http://download.geofabrik.de/europe.html. I have added some numerical fields to the .shp for this demonstration and reprojected to UTM33). You can take a look at the data in e.g. QGIS. Notice that some land features in both datasets.)
+
+You can also take a look at the buildfiles. The main file we'll be calling is rbd_bf/main.bf. It calls the other files.)
+
+Disregard any error message about 'land1' does not exist. This comes from the use of '-d' in case you have tried the demo previously and forgot to remove the DB afterwards.
 
 Demo 1: 
 
@@ -171,9 +168,11 @@ Benchmarks
 
 On this machine (4-core xeon v2 1270, similar to a desktop PC chip), 32GB ram, the total buildtimes on demo4 are:
 
-Basic dataset (~100MB total geometry): 54 seconds.
-10x dataset (~1GB total geometry): 61 seconds.
-100x dataset (~10GB total geometry): 119 seconds.
+- Basic dataset (~100MB total geometry): 54 seconds.
+
+- 10x dataset (~1GB total geometry): 61 seconds.
+
+- 100x dataset (~10GB total geometry): 119 seconds.
 
 (These time measurements did not include the 'add_values' script)
 
