@@ -25,8 +25,7 @@ Overview
 Instructions
 ----
 
-- Make sure you have installed Python, PostGIS and GDAL (with Python bindings/SWIG) 
-  Gnu Parallel, Dan's gdal scripts, numpy, and pyparsing (if it didn't come with Python)
+- Make sure you have installed Python, PostGIS and GDAL (with Python bindings/SWIG), Gnu Parallel, Dan's gdal scripts, numpy, and pyparsing (if it didn't come with Python)
 
     $ yum install postgis gdal parallel numpy python 
 
