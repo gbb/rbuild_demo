@@ -29,7 +29,9 @@ Instructions
   Gnu Parallel, Dan's gdal scripts, numpy, and pyparsing (if it didn't come with Python)
 
     $ yum install postgis gdal parallel numpy python 
+
     (or as appropriate for your linux version)
+
     (ideally postgis >2.1, gdal >1.10, parallel >20130222)
 
     $ compile dan's scripts by hand from github: https://github.com/gina-alaska/dans-gdal-scripts
